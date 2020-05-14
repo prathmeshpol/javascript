@@ -1,0 +1,53 @@
+<h2>JavaScript Class Inheritance</h2>
+
+<p>Use the "extends" keyword to inherit all methods from another class.</p>
+<p>Use the "super" method to call the parent's constructor function.</p>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+
+<script>
+class Account{
+  constructor(name,balance) {
+    this.Accountname = name;
+	this.Accountbalance = balance;
+  }
+  deposit(x) {
+    this.Accountbalance =this.Accountbalance + x;
+
+  }
+}
+
+
+
+
+class currentAccount extends Account {
+  constructor(name,balance,) {
+    super(name,balance);
+    
+  }
+  
+  withdraw(y){
+   this.Accountbalance =this.Accountbalance - y;
+   
+   }
+  
+  
+  show() {
+    return "<b>Account Holder Name is</b>"+" "+this.Accountname+"</br></br>"+"<b>Total balance:</b>"+this.Accountbalance;
+  }
+}
+
+myAccount = new currentAccount("Prathmesh", 15000);
+myAccount.deposit(1000);
+myAccount.withdraw(5000);
+document.getElementById("demo").innerHTML = myAccount.show();
+
+myAccount1 = new currentAccount("Swapnil", 10000);
+myAccount1.deposit(10000);
+myAccount1.withdraw(15000);
+document.getElementById("demo1").innerHTML = myAccount1.show();
+</script>
+
+</body>
+</html>
