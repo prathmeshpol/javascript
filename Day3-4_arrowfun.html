@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Arrow Function</h2>
+
+Number:<input type="text" id="num"> 
+<button type="button"  onclick=factorial()>Factorial</button>
+</input><input type="text" id="demo"></input>
+<script>
+var factorial=()=>
+{
+    var i,n,fact=1;
+    n=Number(document.getElementById("num").value);
+ for(i=1;i<=n;i++)
+ {
+     fact=fact*i;
+ }
+ document.getElementById("demo").value=fact;
+}
+ </script>
+ </body>
+</html>
